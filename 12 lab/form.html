@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktų Forma</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Kontaktų Forma</h2>
+        <form id="contact-form">
+
+            <label for="first-name">Vardas:</label>
+            <input type="text" id="first-name" name="first-name" required>
+            
+            <label for="last-name">Pavardė:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">El. paštas:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefonas:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Adresas:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="question1">Kiek esate patenkinti mūsų paslaugomis (1-10)?</label>
+            <input type="number" id="question1" name="question1" min="1" max="10" required>
+
+            <label for="question2">Kaip vertinate mūsų svetainės dizainą (1-10)?</label>
+            <input type="number" id="question2" name="question2" min="1" max="10" required>
+
+            <label for="question3">Ar mūsų svetainė lengva naudoti (1-10)?</label>
+            <input type="number" id="question3" name="question3" min="1" max="10" required>
+
+            <label for="question4">Kaip vertinate mūsų paslaugų kainą (1-10)?</label>
+            <input type="number" id="question4" name="question4" min="1" max="10" required>
+
+            <label for="question5">Ar rekomenduotumėte mūsų svetainę kitiems (1-10)?</label>
+            <input type="number" id="question5" name="question5" min="1" max="10" required>
+
+            <button type="button" onclick="saveData()">Pateikti</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="error-message" class="error-message"></div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
