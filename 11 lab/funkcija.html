@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divergence Theorem</title>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <style>
+    /* Basic reset and body styling */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+    }
+
+    /* Style the SVG container */
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+
+    /* Make the circle's outline dashed */
+    .dashed-circle {
+      fill: transparent;
+      stroke: blue;
+      stroke-width: 4;
+      stroke-dasharray: 5, 5; /* Dashed outline */
+    }
+
+    /* Style for the MathML container */
+    .math-container {
+      text-align: center;
+      margin-bottom: 20px; /* Space between MathML and the circle */
+    }
+
+    /* Styling for the paragraph text */
+    p {
+      font-size: 18px;
+      color: #333;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="math-container">
+    <p>
+      The <strong>Divergence Theorem</strong> is given by:
+    </p>
+
+    <!-- Start of the MathML equation with increased size -->
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mstyle mathsize="300%">
+        <msub>
+          <mo>&#x222B;</mo> <!-- Integral symbol -->
+          <mi>D</mi> <!-- The region D -->
+        </msub>
+        <mrow>
+          <!-- Del operator (nabla) -->
+          <mi>&#x2207;</mi>
+          <mo>&#x22C5;</mo> <!-- Dot product -->
+          <mi>F</mi> <!-- The vector field F -->
+        </mrow>
+        <mi>d</mi>
+        <mi>V</mi> <!-- Volume element dV -->
+      </mrow>
+      <mo>=</mo> <!-- Equals sign -->
+
+      <!-- Right side of the equation (surface integral) -->
+      <msub>
+        <mo>&#x222B;</mo> <!-- Surface integral symbol -->
+        <mi>&#x2202;D</mi> <!-- Boundary of region D -->
+      </msub>
+      <mrow>
+        <mi>F</mi> <!-- Vector field F -->
+        <mo>&#x22C5;</mo> <!-- Dot product -->
+        <mi>n</mi> <!-- Normal vector n -->
+        <mi>d</mi>
+        <mi>S</mi> <!-- Surface element dS -->
+      </mrow>
+    </mstyle>
+    </math>
+    <!-- End of the MathML equation -->
+  </div>
+
+  <div class="math-container">
+    <!-- Rotating circle with dashed outline -->
+    <svg viewBox="0 0 100 100">
+      <!-- Rotating circle with dashed outline -->
+      <circle cx="50" cy="50" r="40" class="dashed-circle">
+        <!-- Add animation to rotate the circle -->
+        <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0 50 50" to="360 50 50"
+                          dur="4s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+  </div>
+
+  <p>
+    This theorem relates the flux of a vector field through a surface to the divergence of the field within the volume.
+  </p>
+
+</body>
+</html>
